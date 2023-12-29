@@ -1,24 +1,36 @@
 {
-  "name": "vercel-og-nextjs",
-  "repository": "https://github.com/vercel/examples.git",
-  "license": "MIT",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@vercel/og": "latest",
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest"
-  },
-  "devDependencies": {
-    "@types/node": "^18.15.5",
-    "@types/react": "^18.0.28",
-    "turbo": "^1.8.5",
-    "typescript": "^4.9.5"
-  }
+	"name": "otabyte-landing",
+	"repository": "https://github.com/vercel/examples.git",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@headlessui/react": "^1.7.17",
+		"@heroicons/react": "^2.1.1",
+		"@mdx-js/loader": "^3.0.0",
+		"@mdx-js/react": "^3.0.0",
+		"@next/mdx": "^14.0.4",
+		"@tailwindcss/aspect-ratio": "^0.4.2",
+		"@tailwindcss/forms": "^0.5.7",
+		"@tailwindcss/typography": "^0.5.10",
+		"@types/mdx": "^2.0.10",
+		"@vercel/og": "latest",
+		"next": "latest",
+		"react": "latest",
+		"react-dom": "latest"
+	},
+	"devDependencies": {
+		"@types/node": "^18.15.5",
+		"@types/react": "^18.0.28",
+		"autoprefixer": "^10.4.16",
+		"postcss": "^8.4.32",
+		"tailwindcss": "^3.4.0",
+		"turbo": "^1.8.5",
+		"typescript": "^4.9.5"
+	}
 }
