@@ -1,31 +1,34 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
+import OhayouThumb from '@/assets/images/projects/thumbnail/ohayou.png'
+import IzumiThumb from '@/assets/images/projects/thumbnail/izumi.png'
+
 export default function Page() {
 	const projects = [
 		{
 			slug: 'ohayou',
 			name: 'The Ohayou Post',
 			description: 'Lorem ipsum description so long and short enough to fill this non respective content card.',
-			thumbnail: 'https://otabyte.net/_nuxt/img/ohayou.9e389d2.png',
+			thumbnail: OhayouThumb,
 		},
 		{
 			slug: 'izumi',
 			name: 'Izumi Clan',
 			description: 'Lorem ipsum description so long and short enough to fill this non respective content card.',
-			thumbnail: 'https://otabyte.net/_nuxt/img/izumi.0ac7611.png',
+			thumbnail: IzumiThumb,
 		},
 		{
 			slug: 'tomo',
 			name: 'Tomodachi',
 			description: 'Lorem ipsum description so long and short enough to fill this non respective content card.',
-			thumbnail: 'https://otabyte.net/_nuxt/img/izumi.0ac7611.png',
+			thumbnail: IzumiThumb,
 		},
 		{
 			slug: 'abyte',
 			name: 'aByte',
 			description: 'Lorem ipsum description so long and short enough to fill this non respective content card.',
-			thumbnail: 'https://otabyte.net/_nuxt/img/izumi.0ac7611.png',
+			thumbnail: IzumiThumb,
 		},
 	]
 	return (
