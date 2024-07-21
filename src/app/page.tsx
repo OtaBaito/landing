@@ -1,4 +1,4 @@
-import Mascot from '@/assets/images/josyifa/lily_sketch.jpeg'
+import Mascot from '@/assets/images/abdul/lily.jpg'
 import { Scribble } from '@/components/generic'
 import Image from 'next/image'
 
