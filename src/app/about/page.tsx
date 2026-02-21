@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
 export default function Page() {
 	return (
 		<main className="max-w-7xl mx-auto px-6 pb-24">
@@ -13,7 +16,25 @@ export default function Page() {
 				</div>
 
 				<div className="lg:col-span-7 space-y-16">
-					<section className="animate-fade-up opacity-0" style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}>
+					<section className="bg-neutral-50 rounded-[2.5rem] p-8 md:p-12 border border-neutral-100 animate-fade-up opacity-0" style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}>
+						<h3 className="text-2xl font-bold text-neutral-900 mb-6">Who &amp; When</h3>
+						<div className="space-y-6 text-lg text-neutral-600 leading-relaxed">
+							<p>
+								Who we are might rather difficult to answer, as I’m, X, the founder
+								itself, written most the story all the time, I don't think OtaByte is a mere community,
+								it's more like a family.
+							</p>
+							<p>
+								OtaByte was founded in 2019, as a small community that aspired to be
+								a place for hobbyist to share their passion and creativity. The first goal were to make a Visual Novel which actually not really going well since we didn't have enough resource to make it.
+							</p>
+						</div>
+						<div className="mt-12 pt-8 border-t border-neutral-200 italic text-neutral-400 text-sm">
+							Frankly, the X itself
+						</div>
+					</section>
+
+					<section className="animate-fade-up opacity-0" style={{ animationDelay: "0.45s", animationFillMode: "forwards" }}>
 						<div className="flex items-center gap-4 mb-8">
 							<div className="h-px flex-1 bg-neutral-200"></div>
 							<h2 className="text-sm uppercase tracking-[0.2em] font-bold text-neutral-400">Our Essence</h2>
@@ -43,13 +64,13 @@ export default function Page() {
 						</div>
 					</section>
 
-					<section className="animate-fade-up opacity-0" style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}>
+					<section className="animate-fade-up opacity-0" style={{ animationDelay: "0.65s", animationFillMode: "forwards" }}>
 						<div className="flex items-center gap-4 mb-8">
 							<div className="h-px flex-1 bg-neutral-200"></div>
 							<h2 className="text-sm uppercase tracking-[0.2em] font-bold text-neutral-400">Origin Story</h2>
 						</div>
 
-						<h3 className="text-2xl font-bold text-neutral-900 mb-6">Why &amp; What</h3>
+						<h3 className="text-2xl font-bold text-neutral-900 mb-6">What &amp; Why</h3>
 
 						<div className="space-y-6 text-lg md:text-xl text-neutral-600 leading-relaxed font-medium">
 							<p>
@@ -61,36 +82,25 @@ export default function Page() {
 							</p>
 
 							<p>
-								OtaByte itself was like a joke. While we already launched Ohayou Post,
+								However, the <Link href="https://project.otabyte.net/?utm_source=otabyte.net&utm_medium=referral&utm_campaign=about_page" className="text-sky-500 hover:text-sky-600 underline decoration-sky-500/30 underline-offset-4">project</Link> itself was like a joke. Since Ohayou Post launched,
 								we barely maintain it since OtaByte was never making profit in
 								the first place. X was aware of this situation since many “project”
-								are debunked and closed early before make any more lost to the
-								SABAKO as the parent company that subsidized everything...
+								are debunked and closed early before make any more lost to the <Link href="https://sabako.id/?utm_source=otabyte.net&utm_medium=referral&utm_campaign=about_page" className="text-sky-500 hover:text-sky-600 underline decoration-sky-500/30 underline-offset-4">SABAKO</Link> as the parent company that subsidized everything...
 							</p>
 						</div>
 					</section>
 				</div>
 
-				<aside className="lg:col-span-5 sticky top-8 bg-neutral-50 rounded-[2.5rem] p-8 md:p-12 border border-neutral-100">
-					<section className="animate-fade-up opacity-0" style={{ animationDelay: "0.45s", animationFillMode: "forwards" }}>
-						<h3 className="text-2xl font-bold text-neutral-900 mb-6">Who &amp; When</h3>
-						<div className="space-y-6 text-lg text-neutral-600 leading-relaxed">
-							<p>
-								Who you say might rather difficult to answer, but as I’m the X
-								itself written all the time, I would like to say to hunt a fresh
-								head for the talent. How many isn’t a question while I personally
-								like for quality polished rather than quantity.
-							</p>
-							<p className="bg-white p-6 rounded-2xl border border-neutral-100 shadow-sm">
-								<span className="block text-sky-500 font-bold mb-2 text-sm uppercase tracking-wider">The Roadmap</span>
-								But pretty sure to follow the idea, I would safely assume <span className="text-neutral-900 font-black">Q2</span> would
-								be a great start at soonest.
-							</p>
-						</div>
-						<div className="mt-12 pt-8 border-t border-neutral-200 italic text-neutral-400 text-sm">
-							Frankly, the X itself
-						</div>
-					</section>
+				<aside className="lg:col-span-5 sticky top-8 flex flex-col gap-8">
+					<p className="bg-white p-6 rounded-2xl border border-neutral-100 shadow-sm animate-fade-up opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
+						<span className="block text-sky-500 font-bold mb-2 text-sm uppercase tracking-wider">The Roadmap</span>
+						<span className="text-neutral-900 font-black">Q1 2026</span> marking the transformation, appreciating every hobby in this world.
+					</p>
+
+					<div className="w-full aspect-[3/4] md:aspect-[4/5] bg-neutral-100 rounded-[2.5rem] overflow-hidden relative shadow-2xl animate-fade-up opacity-0 border border-neutral-200" style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}>
+						<Image src="/images/akiba.webp" alt="Akihabara" fill className="object-cover hover:scale-105 transition-transform duration-700" priority />
+						<div className="absolute inset-0 bg-gradient-to-t from-neutral-900/40 to-transparent"></div>
+					</div>
 				</aside>
 			</div>
 		</main>
