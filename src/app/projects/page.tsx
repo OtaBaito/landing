@@ -1,20 +1,21 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function ProjectsPage() {
 	return (
 		<main className="w-full bg-white pb-16 md:pb-32">
 			{/* Projects Header */}
 			<section className="max-w-7xl mx-auto px-6 pt-8 md:pt-12 pb-12 md:pb-16 text-center">
-				<div className="inline-block px-4 py-1.5 rounded-full border border-neutral-300 text-neutral-500 font-bold text-sm tracking-widest uppercase mb-4">
+				<div className="inline-block px-4 py-1.5 rounded-full border border-neutral-300 text-neutral-500 font-bold text-sm tracking-widest uppercase mb-4 animate-fade-up opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
 					The Quest Log
 				</div>
-				<h1 className="font-hanson text-4xl md:text-6xl lg:text-8xl tracking-tight text-neutral-900 uppercase drop-shadow-sm">
+				<h1 className="font-hanson text-4xl md:text-6xl lg:text-8xl tracking-tight text-neutral-900 uppercase drop-shadow-sm animate-fade-up opacity-0" style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}>
 					Our Projects
 				</h1>
 			</section>
 
 			{/* Section A: Indie Game */}
-			<section className="max-w-7xl mx-auto px-6 py-12 md:py-16 border-t border-neutral-100">
+			<section className="max-w-7xl mx-auto px-6 py-12 md:py-16 border-t border-neutral-100 animate-fade-up opacity-0" style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}>
 				{/* Game Hero Banner Placeholder */}
 				<div className="w-full aspect-[4/3] md:aspect-video bg-neutral-900 rounded-3xl overflow-hidden relative shadow-2xl mb-8 md:mb-12 flex items-center justify-center group">
 					<div className="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500 bg-[radial-gradient(circle_at_center,rgba(6,182,212,0.4)_0%,transparent_70%)]"></div>
@@ -22,23 +23,23 @@ export default function ProjectsPage() {
 						<path strokeLinecap="round" strokeLinejoin="round" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
 					</svg>
 					<div className="absolute inset-x-0 bottom-0 p-6 md:p-8 bg-gradient-to-t from-neutral-900 to-transparent">
-						<div className="font-hanson text-2xl md:text-3xl lg:text-5xl text-white uppercase tracking-wider drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]">Project: Astral Frame</div>
+						<div className="font-hanson text-2xl md:text-3xl lg:text-5xl text-white uppercase tracking-wider drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]">Project: Witch Cafe</div>
 					</div>
 				</div>
 
 				<div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
 					<div className="flex-1 space-y-4 md:space-y-6">
-						<h2 className="font-hanson text-2xl md:text-3xl lg:text-4xl text-neutral-900 uppercase">A New Reality Awaits</h2>
+						<h2 className="font-hanson text-2xl md:text-3xl lg:text-4xl text-neutral-900 uppercase">Calm Journey Beyond the 4th Wall</h2>
 						<p className="text-lg text-neutral-600 font-medium leading-relaxed">
-							Dive into a breathtaking sci-fi universe where humanity clings to the edge of the cosmos. Pilot incredible mechs, form unbreakable bonds, and unravel the mysteries of the Void in our upcoming flagship indie title.
+							A cozy desktop companion where you play as a witch running a cafe for magical creatures. Brew potions, serve customers, and uncover the secrets of the town.
 						</p>
 						<div className="pt-4">
-							<a href="#" className="inline-flex items-center gap-3 px-8 py-4 bg-cyan-500 text-neutral-900 font-black tracking-widest uppercase rounded-lg shadow-[0_0_15px_rgba(6,182,212,0.6)] hover:bg-cyan-400 hover:shadow-[0_0_25px_rgba(6,182,212,0.8)] transition-all hover:-translate-y-1 active:scale-95">
+							<Link href="#" className="inline-flex items-center gap-3 px-8 py-4 bg-cyan-500 text-neutral-900 font-black tracking-widest uppercase rounded-lg shadow-[0_0_15px_rgba(6,182,212,0.6)] hover:bg-cyan-400 hover:shadow-[0_0_25px_rgba(6,182,212,0.8)] transition-all hover:-translate-y-1 active:scale-95">
 								<svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
 									<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
 								</svg>
 								Wishlist Now
-							</a>
+							</Link>
 						</div>
 					</div>
 					<div className="flex-1">
@@ -84,16 +85,16 @@ export default function ProjectsPage() {
 							<h3 className="font-bold text-xl text-neutral-900 mb-2">Astra Nyx</h3>
 							<p className="text-sm text-neutral-500 font-medium mb-6 line-clamp-2">A celestial observer turned chaotic gamer. Specializes in FPS and rhythm games.</p>
 							<div className="flex items-center justify-center gap-4 text-neutral-400">
-								<a href="#" className="hover:text-cyan-500 transition-colors">
+								<Link href="#" className="hover:text-cyan-500 transition-colors">
 									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
 										<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
 									</svg>
-								</a>
-								<a href="#" className="hover:text-cyan-500 transition-colors">
+								</Link>
+								<Link href="#" className="hover:text-cyan-500 transition-colors">
 									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
 										<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
 									</svg>
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -110,16 +111,16 @@ export default function ProjectsPage() {
 							<h3 className="font-bold text-xl text-neutral-900 mb-2">Kira byte</h3>
 							<p className="text-sm text-neutral-500 font-medium mb-6 line-clamp-2">A rogue AI who loves solving puzzles and chatting with human developers.</p>
 							<div className="flex items-center justify-center gap-4 text-neutral-400">
-								<a href="#" className="hover:text-cyan-500 transition-colors">
+								<Link href="#" className="hover:text-cyan-500 transition-colors">
 									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
 										<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
 									</svg>
-								</a>
-								<a href="#" className="hover:text-cyan-500 transition-colors">
+								</Link>
+								<Link href="#" className="hover:text-cyan-500 transition-colors">
 									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
 										<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
 									</svg>
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -136,16 +137,16 @@ export default function ProjectsPage() {
 							<h3 className="font-bold text-xl text-neutral-900 mb-2">Leon Sparks</h3>
 							<p className="text-sm text-neutral-500 font-medium mb-6 line-clamp-2">Speedrunner and hype man. Known for breaking games and setting world records live.</p>
 							<div className="flex items-center justify-center gap-4 text-neutral-400">
-								<a href="#" className="hover:text-cyan-500 transition-colors">
+								<Link href="#" className="hover:text-cyan-500 transition-colors">
 									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
 										<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
 									</svg>
-								</a>
-								<a href="#" className="hover:text-cyan-500 transition-colors">
+								</Link>
+								<Link href="#" className="hover:text-cyan-500 transition-colors">
 									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
 										<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
 									</svg>
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -170,49 +171,45 @@ export default function ProjectsPage() {
 				</div>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-					{/* Partner 1: Ohayou Post */}
-					<a href="/ohayou" className="group bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] border-2 border-neutral-800 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300 hover:-translate-y-2 flex flex-col">
-						<div className="aspect-video bg-neutral-100 relative overflow-hidden flex items-center justify-center border-b-2 border-neutral-800 group-hover:border-cyan-400 transition-colors">
-							<div className="text-neutral-400 font-bold uppercase tracking-widest text-xs">OhayouThumb</div>
+					<Link href="https://ohayoupost.com/?utm_source=otabyte&utm_medium=referral&utm_campaign=showcase" className="group bg-white overflow-hidden hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300 flex flex-col">
+						<div className="aspect-video relative overflow-hidden flex items-center justify-center">
+							<Image src="/images/projects/ohayou.png" alt="Ohayou Post" fill className="object-contain group-hover:rotate-15 group-hover:scale-110 transition-all duration-300" />
 						</div>
 						<div className="p-6 flex-1 flex flex-col">
 							<h3 className="font-bold text-xl text-neutral-900 mb-2">The Ohayou Post</h3>
 							<p className="text-sm text-neutral-600 font-medium leading-relaxed">A community-driven news platform for anime and gaming enthusiasts.</p>
 						</div>
-					</a>
+					</Link>
 
-					{/* Partner 2: Izumi Clan */}
-					<a href="/izumi" className="group bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] border-2 border-neutral-800 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300 hover:-translate-y-2 flex flex-col">
-						<div className="aspect-video bg-neutral-100 relative overflow-hidden flex items-center justify-center border-b-2 border-neutral-800 group-hover:border-cyan-400 transition-colors">
-							<div className="text-neutral-400 font-bold uppercase tracking-widest text-xs">IzumiThumb</div>
+					<Link href="#" className="group bg-white overflow-hidden hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300 flex flex-col">
+						<div className="aspect-video relative overflow-hidden flex items-center justify-center">
+							<Image src="/images/projects/izumi.png" alt="Izumi Clan" fill className="object-contain group-hover:rotate-15 group-hover:scale-110 transition-all duration-300" />
 						</div>
 						<div className="p-6 flex-1 flex flex-col">
 							<h3 className="font-bold text-xl text-neutral-900 mb-2">Izumi Clan</h3>
 							<p className="text-sm text-neutral-600 font-medium leading-relaxed">Cultivating a space for artists and creators to thrive and share their work.</p>
 						</div>
-					</a>
+					</Link>
 
-					{/* Partner 3: Tomodachi */}
-					<a href="/tomo" className="group bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] border-2 border-neutral-800 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300 hover:-translate-y-2 flex flex-col">
-						<div className="aspect-video bg-neutral-100 relative overflow-hidden flex items-center justify-center border-b-2 border-neutral-800 group-hover:border-cyan-400 transition-colors">
-							<div className="text-neutral-400 font-bold uppercase tracking-widest text-xs">IzumiThumb</div>
+					<Link href="#" className="group bg-white overflow-hidden hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300 flex flex-col">
+						<div className="aspect-video bg-neutral-100 relative overflow-hidden flex items-center justify-center group-hover:rotate-15 group-hover:scale-110 transition-all duration-300">
+							<div className="text-neutral-400 font-bold uppercase tracking-widest text-xs">Tomodachi</div>
 						</div>
 						<div className="p-6 flex-1 flex flex-col">
 							<h3 className="font-bold text-xl text-neutral-900 mb-2">Tomodachi</h3>
 							<p className="text-sm text-neutral-600 font-medium leading-relaxed">Connecting like-minded individuals through shared hobbies and interests.</p>
 						</div>
-					</a>
+					</Link>
 
-					{/* Partner 4: aByte */}
-					<a href="/abyte" className="group bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] border-2 border-neutral-800 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300 hover:-translate-y-2 flex flex-col">
-						<div className="aspect-video bg-neutral-100 relative overflow-hidden flex items-center justify-center border-b-2 border-neutral-800 group-hover:border-cyan-400 transition-colors">
-							<div className="text-neutral-400 font-bold uppercase tracking-widest text-xs">IzumiThumb</div>
+					<Link href="#" className="group bg-white overflow-hidden hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300 flex flex-col">
+						<div className="aspect-video bg-neutral-100 relative overflow-hidden flex items-center justify-center group-hover:rotate-15 group-hover:scale-110 transition-all duration-300">
+							<div className="text-neutral-400 font-bold uppercase tracking-widest text-xs">aByte</div>
 						</div>
 						<div className="p-6 flex-1 flex flex-col">
 							<h3 className="font-bold text-xl text-neutral-900 mb-2">aByte</h3>
 							<p className="text-sm text-neutral-600 font-medium leading-relaxed">Technical solutions and creative experiments from the OtaByte team.</p>
 						</div>
-					</a>
+					</Link>
 				</div>
 			</section>
 
