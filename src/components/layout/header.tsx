@@ -9,7 +9,7 @@ export default function Component() {
 	const navigation = [
 		{ label: 'Home', href: '/' },
 		{ label: 'Projects', href: '/projects' },
-		{ label: 'About', href: '/about' },
+		{ label: 'Merch', href: '/merch' },
 		{ label: 'Contact', href: '/contact' },
 	]
 
@@ -17,8 +17,9 @@ export default function Component() {
 
 	return (
 		<header className="flex max-w-7xl mx-auto px-6 mt-12 mb-24 justify-between items-center relative z-50">
-			<Link href="/" className="transition-transform hover:scale-105 active:scale-95 duration-200">
-				<Image src={Logo} alt="OtaByte" width={110} height={60} className="w-auto h-12" />
+			<Link href="/" className="flex items-center gap-4">
+				<Image src={Logo} alt="OtaByte" width={110} height={60} className="w-auto h-7" />
+				<span className="font-hanson text-3xl font-bold text-neutral-900 uppercase">OtaByte</span>
 			</Link>
 			<nav className="flex space-x-8 items-center">
 				{
@@ -26,11 +27,11 @@ export default function Component() {
 						<Link
 							key={nav.href}
 							href={nav.href}
-							className={`text-sm tracking-wide font-semibold transition-all duration-300 relative py-1
+							className={`font-bold uppercase text-sm tracking-widest transition-all duration-300 relative py-1
 								${nav.href === pathname
 									? 'text-neutral-900 after:w-full'
-									: 'text-neutral-500 hover:text-neutral-900 after:w-0'}
-								after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-sky-500 after:transition-all after:duration-300 hover:after:w-full`}>
+									: 'text-neutral-500 hover:text-neutral-400 after:w-0'}
+								after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-cyan-400 after:transition-all after:duration-300 hover:after:w-full`}>
 							{nav.label}
 						</Link>
 					))
