@@ -2,33 +2,33 @@ import Image from 'next/image'
 
 export default function ProjectsPage() {
 	return (
-		<main className="w-full bg-white pb-32">
+		<main className="w-full bg-white pb-16 md:pb-32">
 			{/* Projects Header */}
-			<section className="max-w-7xl mx-auto px-6 pt-12 pb-16 text-center">
+			<section className="max-w-7xl mx-auto px-6 pt-8 md:pt-12 pb-12 md:pb-16 text-center">
 				<div className="inline-block px-4 py-1.5 rounded-full border border-neutral-300 text-neutral-500 font-bold text-sm tracking-widest uppercase mb-4">
 					The Quest Log
 				</div>
-				<h1 className="font-hanson text-5xl md:text-7xl lg:text-8xl tracking-tight text-neutral-900 uppercase drop-shadow-sm">
+				<h1 className="font-hanson text-4xl md:text-6xl lg:text-8xl tracking-tight text-neutral-900 uppercase drop-shadow-sm">
 					Our Projects
 				</h1>
 			</section>
 
 			{/* Section A: Indie Game */}
-			<section className="max-w-7xl mx-auto px-6 py-16 border-t border-neutral-100">
+			<section className="max-w-7xl mx-auto px-6 py-12 md:py-16 border-t border-neutral-100">
 				{/* Game Hero Banner Placeholder */}
-				<div className="w-full aspect-video bg-neutral-900 rounded-3xl overflow-hidden relative shadow-2xl mb-12 flex items-center justify-center group">
+				<div className="w-full aspect-[4/3] md:aspect-video bg-neutral-900 rounded-3xl overflow-hidden relative shadow-2xl mb-8 md:mb-12 flex items-center justify-center group">
 					<div className="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500 bg-[radial-gradient(circle_at_center,rgba(6,182,212,0.4)_0%,transparent_70%)]"></div>
-					<svg xmlns="http://www.w3.org/2000/svg" className="w-32 h-32 text-cyan-500 drop-shadow-[0_0_20px_rgba(6,182,212,0.8)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+					<svg xmlns="http://www.w3.org/2000/svg" className="w-24 h-24 md:w-32 md:h-32 text-cyan-500 drop-shadow-[0_0_20px_rgba(6,182,212,0.8)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
 						<path strokeLinecap="round" strokeLinejoin="round" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
 					</svg>
-					<div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-neutral-900 to-transparent">
-						<div className="font-hanson text-3xl md:text-5xl text-white uppercase tracking-wider drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]">Project: Astral Frame</div>
+					<div className="absolute inset-x-0 bottom-0 p-6 md:p-8 bg-gradient-to-t from-neutral-900 to-transparent">
+						<div className="font-hanson text-2xl md:text-3xl lg:text-5xl text-white uppercase tracking-wider drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]">Project: Astral Frame</div>
 					</div>
 				</div>
 
-				<div className="flex flex-col lg:flex-row gap-16">
-					<div className="flex-1 space-y-6">
-						<h2 className="font-hanson text-3xl md:text-4xl text-neutral-900 uppercase">A New Reality Awaits</h2>
+				<div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
+					<div className="flex-1 space-y-4 md:space-y-6">
+						<h2 className="font-hanson text-2xl md:text-3xl lg:text-4xl text-neutral-900 uppercase">A New Reality Awaits</h2>
 						<p className="text-lg text-neutral-600 font-medium leading-relaxed">
 							Dive into a breathtaking sci-fi universe where humanity clings to the edge of the cosmos. Pilot incredible mechs, form unbreakable bonds, and unravel the mysteries of the Void in our upcoming flagship indie title.
 						</p>
@@ -62,10 +62,10 @@ export default function ProjectsPage() {
 			</section>
 
 			{/* Section B: VTuber Agency */}
-			<section className="max-w-7xl mx-auto px-6 py-24 border-t border-neutral-100 bg-neutral-50/50 mt-12 rounded-t-[3rem]">
-				<div className="text-center mb-16 space-y-4">
-					<h2 className="font-hanson text-4xl md:text-5xl text-neutral-900 uppercase">Talent Roster</h2>
-					<p className="text-neutral-500 text-lg font-medium max-w-2xl mx-auto">Meet the digital idols bringing our worlds to life across the internet.</p>
+			<section className="max-w-7xl mx-auto px-6 py-12 md:py-24 border-t border-neutral-100 bg-neutral-50/50 mt-8 md:mt-12 rounded-[2rem] md:rounded-t-[3rem]">
+				<div className="text-center mb-10 md:mb-16 space-y-4">
+					<h2 className="font-hanson text-3xl md:text-4xl lg:text-5xl text-neutral-900 uppercase">Talent Roster</h2>
+					<p className="text-neutral-500 text-base md:text-lg font-medium max-w-2xl mx-auto">Meet the digital idols bringing our worlds to life across the internet.</p>
 				</div>
 
 				{/* Talent Grid */}
@@ -163,10 +163,10 @@ export default function ProjectsPage() {
 			</section>
 
 			{/* Section C: Alliances & Collaborations */}
-			<section className="max-w-7xl mx-auto px-6 py-24 bg-white">
-				<div className="text-center mb-16 space-y-4">
-					<h2 className="font-hanson text-4xl md:text-5xl text-neutral-900 uppercase">Alliances & Collaborations</h2>
-					<p className="text-neutral-500 text-lg font-medium max-w-2xl mx-auto">Projects and communities born from the OtaByte network.</p>
+			<section className="max-w-7xl mx-auto px-6 py-16 md:py-24 bg-white">
+				<div className="text-center mb-10 md:mb-16 space-y-4">
+					<h2 className="font-hanson text-3xl md:text-4xl lg:text-5xl text-neutral-900 uppercase">Alliances & Collaborations</h2>
+					<p className="text-neutral-500 text-base md:text-lg font-medium max-w-2xl mx-auto">Projects and communities born from the OtaByte network.</p>
 				</div>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

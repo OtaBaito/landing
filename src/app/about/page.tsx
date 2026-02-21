@@ -4,7 +4,7 @@ export default function Page() {
 			<div className="grid lg:grid-cols-12 gap-16 items-start">
 				<div className="lg:col-span-12">
 					<h1
-						className="mb-12 animate-fade-up bg-linear-to-br from-neutral-900 to-neutral-500 bg-clip-text text-5xl md:text-8xl font-black tracking-tight text-transparent opacity-0 drop-shadow-sm text-balance transition-all"
+						className="mb-12 animate-fade-up bg-linear-to-br from-neutral-900 to-neutral-500 bg-clip-text text-5xl md:text-8xl font-black tracking-tight text-transparent opacity-0 text-balance transition-all"
 						style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
 					>
 						Just a brief <br />
@@ -30,7 +30,7 @@ export default function Page() {
 								of kind to be entitled as <span className="text-neutral-900 font-bold underline decoration-sky-500/30 underline-offset-4">“Otaku”</span> to not rated as just a mere weebs.
 								We withstand any circumstance that might bring disgrace for our
 								honor, we tried so hard to make sure people are beneficial from our
-								community, not just for us the otaku but for everyone that are
+								community, not just for us the otaku but for everyone that also
 								hobbyist.
 							</p>
 
@@ -61,8 +61,8 @@ export default function Page() {
 							</p>
 
 							<p>
-								OtaByte itself was like a joke while it already launched Ohayou Post
-								even they barely maintained since OtaByte was never making profit in
+								OtaByte itself was like a joke. While we already launched Ohayou Post,
+								we barely maintain it since OtaByte was never making profit in
 								the first place. X was aware of this situation since many “project”
 								are debunked and closed early before make any more lost to the
 								SABAKO as the parent company that subsidized everything...

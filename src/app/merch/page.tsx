@@ -50,22 +50,22 @@ export default function MerchPage() {
 	}
 
 	return (
-		<main className="w-full bg-white pb-32">
+		<main className="w-full bg-white pb-16 md:pb-32">
 			{/* Merch Header */}
-			<section className="max-w-7xl mx-auto px-6 pt-12 pb-16 text-center border-b border-neutral-100 flex flex-col items-center">
+			<section className="max-w-7xl mx-auto px-6 pt-8 md:pt-12 pb-12 md:pb-16 text-center border-b border-neutral-100 flex flex-col items-center">
 				<div className="inline-block px-4 py-1.5 rounded-full border border-neutral-300 text-neutral-500 font-bold text-sm tracking-widest uppercase mb-4">
 					Loot Drop
 				</div>
-				<h1 className="font-hanson text-6xl md:text-7xl lg:text-8xl tracking-tight text-neutral-900 uppercase drop-shadow-sm">
+				<h1 className="font-hanson text-5xl md:text-7xl lg:text-8xl tracking-tight text-neutral-900 uppercase drop-shadow-sm">
 					Official Merch
 				</h1>
-				<p className="text-xl text-neutral-600 font-medium leading-relaxed max-w-2xl mx-auto mt-6">
+				<p className="text-lg md:text-xl text-neutral-600 font-medium leading-relaxed max-w-2xl mx-auto mt-4 md:mt-6">
 					Wear the nexus. Shop exclusive, ultra-high-quality apparel and accessories straight from the guild.
 				</p>
 			</section>
 
 			{/* Products Grid */}
-			<section className="max-w-7xl mx-auto px-6 py-16">
+			<section className="max-w-7xl mx-auto px-6 py-12 md:py-16">
 
 				{/* Currency Toggle */}
 				<div className="flex justify-end mb-8 relative z-30">

@@ -5,10 +5,10 @@ import Link from 'next/link'
 
 export default function Page() {
 	return (
-		<main className="max-w-7xl mx-auto px-6 pb-24">
-			<div className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24">
-				<div className="flex-1 space-y-12">
-					<h1 className="text-6xl lg:text-8xl font-black tracking-tight leading-[1.1] text-neutral-900">
+		<main className="max-w-7xl mx-auto px-6 pb-16 md:pb-24">
+			<div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-12 lg:gap-24">
+				<div className="flex-1 space-y-8 md:space-y-12">
+					<h1 className="text-5xl md:text-6xl lg:text-8xl font-black tracking-tight leading-[1.1] text-neutral-900">
 						Made<br />
 						<span className="text-sky-500">Hobby</span>
 						<div className="inline-block md:block">to <span className="relative inline-block px-2">
@@ -22,8 +22,8 @@ export default function Page() {
 							<span className="absolute -inset-1 bg-sky-50 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 -z-10" />
 						</span> We empower hobbyists to turn their dreams into reality through community and innovation.
 					</p>
-					<div className="flex gap-4 pt-4">
-						<Link href="/projects" className="px-8 py-4 bg-neutral-900 text-white font-bold rounded-2xl hover:bg-neutral-800 transition-all hover:shadow-xl active:scale-95">
+					<div className="flex flex-col sm:flex-row gap-4 pt-4">
+						<Link href="/projects" className="px-8 py-4 bg-neutral-900 text-white font-bold rounded-2xl hover:bg-neutral-800 transition-all hover:shadow-xl active:scale-95 text-center">
 							Explore Projects
 						</Link>
 						<Link href="/about" className="px-8 py-4 bg-white border-2 border-neutral-100 text-neutral-900 font-bold rounded-2xl hover:border-neutral-200 transition-all active:scale-95">
@@ -46,10 +46,10 @@ export default function Page() {
 			{/* </section> */}
 
 			{/* Projects Section: The Quest Board */}
-			<section id="quest-board" className="max-w-7xl mx-auto px-6 py-24 scroll-mt-12">
-				<div className="text-center mb-16 space-y-4">
-					<h2 className="font-hanson text-4xl md:text-5xl text-neutral-900 uppercase">The Quest Board</h2>
-					<p className="text-neutral-500 text-lg font-medium max-w-2xl mx-auto">Select your mission. Dive into our latest creations and become part of the guild.</p>
+			<section id="quest-board" className="max-w-7xl mx-auto px-6 py-16 md:py-24 scroll-mt-12">
+				<div className="text-center mb-12 md:mb-16 space-y-4">
+					<h2 className="font-hanson text-3xl md:text-4xl lg:text-5xl text-neutral-900 uppercase">The Quest Board</h2>
+					<p className="text-neutral-500 text-base md:text-lg font-medium max-w-2xl mx-auto">Select your mission. Dive into our latest creations and become part of the guild.</p>
 				</div>
 
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -129,12 +129,12 @@ export default function Page() {
 			</section>
 
 			{/* About Section: About the Guild */}
-			<section className="max-w-7xl mx-auto px-6 py-24 border-t border-neutral-100">
-				<div className="flex flex-col md:flex-row items-center gap-16">
-					<div className="flex-1 space-y-6">
-						<h2 className="font-hanson text-4xl md:text-5xl text-neutral-900 uppercase">About<br />The Guild</h2>
-						<div className="w-16 h-1 bg-cyan-400"></div>
-						<p className="text-xl text-neutral-600 font-medium leading-relaxed">
+			<section className="max-w-7xl mx-auto px-6 py-16 md:py-24 border-t border-neutral-100">
+				<div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+					<div className="flex-1 space-y-6 text-center md:text-left">
+						<h2 className="font-hanson text-3xl md:text-4xl lg:text-5xl text-neutral-900 uppercase">About<br className="hidden md:block" />The Guild</h2>
+						<div className="w-16 h-1 bg-cyan-400 mx-auto md:mx-0"></div>
+						<p className="text-lg md:text-xl text-neutral-600 font-medium leading-relaxed">
 							We are a collective of pop-culture enthusiasts, building worlds through games and virtual talents. OtaByte is more than a studio—it\'s a movement dedicated to turning radical hobbies into bleeding-edge creativity.
 						</p>
 					</div>
@@ -151,13 +151,13 @@ export default function Page() {
 			</section>
 
 			{/* Latest Updates Section: Transmission */}
-			<section className="max-w-7xl mx-auto px-6 py-24 bg-neutral-50/50 rounded-3xl mb-8">
-				<div className="flex items-end justify-between mb-12">
+			<section className="max-w-7xl mx-auto px-6 py-16 md:py-24 bg-neutral-50/50 rounded-3xl mb-8">
+				<div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-8 md:mb-12 gap-4 md:gap-0">
 					<div>
-						<h2 className="font-hanson text-3xl md:text-4xl text-neutral-900 uppercase">Incoming Transmissions</h2>
-						<p className="text-neutral-500 font-medium mt-2">The latest intel straight from the nexus.</p>
+						<h2 className="font-hanson text-2xl md:text-3xl lg:text-4xl text-neutral-900 uppercase">Incoming Transmissions</h2>
+						<p className="text-neutral-500 text-sm md:text-base font-medium mt-2">The latest intel straight from the nexus.</p>
 					</div>
-					<Link href="#" className="hidden md:flex text-neutral-900 font-bold items-center gap-2 hover:text-cyan-500 transition-colors">
+					<Link href="#" className="flex text-neutral-900 font-bold items-center gap-2 hover:text-cyan-500 transition-colors">
 						View All Logs
 						<svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
 							<path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />

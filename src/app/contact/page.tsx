@@ -1,17 +1,17 @@
 export default function ContactPage() {
 	return (
 		<main className="w-full bg-white flex flex-col min-h-[80vh]">
-			<section className="flex-1 max-w-7xl mx-auto w-full px-6 py-24">
+			<section className="flex-1 max-w-7xl mx-auto w-full px-6 py-12 md:py-24">
 
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 relative">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 relative">
 					{/* Vertical Divider Line for Desktop */}
 					<div className="hidden lg:block absolute left-1/2 top-8 bottom-8 w-px bg-gradient-to-b from-transparent via-neutral-200 to-transparent -translate-x-1/2"></div>
 
 					{/* Left Column: The Uplink Form */}
 					<div className="flex flex-col">
-						<h2 className="font-hanson text-4xl md:text-5xl text-neutral-900 uppercase mb-8">Send A Message</h2>
+						<h2 className="font-hanson text-3xl md:text-4xl lg:text-5xl text-neutral-900 uppercase mb-6 md:mb-8">Send A Message</h2>
 
-						<div className="w-full bg-white rounded-2xl shadow-xl shadow-neutral-200/50 border border-neutral-100 p-8 md:p-10 relative overflow-hidden flex-1">
+						<div className="w-full bg-white rounded-2xl shadow-xl shadow-neutral-200/50 border border-neutral-100 p-6 sm:p-8 md:p-10 relative overflow-hidden flex-1">
 							{/* Decorative top border */}
 							<div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-cyan-400 to-cyan-500"></div>
 
@@ -66,10 +66,10 @@ export default function ContactPage() {
 					</div>
 
 					{/* Right Column: Direct Comms & SNS */}
-					<div className="flex flex-col lg:pl-8 justify-center mt-12 lg:mt-0">
-						<h2 className="font-hanson text-4xl md:text-5xl text-neutral-900 uppercase mb-8">Direct Comms</h2>
+					<div className="flex flex-col lg:pl-8 justify-center mt-4 sm:mt-8 lg:mt-0">
+						<h2 className="font-hanson text-3xl md:text-4xl lg:text-5xl text-neutral-900 uppercase mb-6 md:mb-8">Direct Comms</h2>
 
-						<div className="space-y-12">
+						<div className="space-y-8 md:space-y-12">
 							<div>
 								<div className="text-sm font-bold uppercase tracking-widest text-neutral-400 mb-2">Official Channel</div>
 								<a href="mailto:contact@otabyte.net" className="text-2xl md:text-3xl font-bold text-neutral-900 hover:text-cyan-500 hover:drop-shadow-[0_0_10px_rgba(6,182,212,0.5)] transition-all">
