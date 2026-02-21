@@ -8,7 +8,7 @@ export default function Page() {
 		<main className="max-w-7xl mx-auto px-6 pb-16 md:pb-24">
 			<div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-12 lg:gap-24">
 				<div className="flex-1 space-y-8 md:space-y-12">
-					<h1 className="text-5xl md:text-6xl lg:text-8xl font-black tracking-tight leading-[1.1] text-neutral-900">
+					<h1 className="text-5xl md:text-6xl lg:text-8xl font-black tracking-tight leading-[1.1] text-neutral-900 animate-fade-up opacity-0" style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}>
 						Made<br />
 						<span className="text-sky-500">Hobby</span>
 						<div className="inline-block md:block">to <span className="relative inline-block px-2">
@@ -16,13 +16,13 @@ export default function Page() {
 							<Scribble className="absolute -inset-1 z-0 h-full w-full text-sky-400 opacity-20" />
 						</span></div>
 					</h1>
-					<p className="max-w-xl text-xl lg:text-2xl text-neutral-600 font-medium leading-relaxed">
+					<p className="max-w-xl text-xl lg:text-2xl text-neutral-600 font-medium leading-relaxed animate-fade-up opacity-0" style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}>
 						Our passion is meant to unlock a new world full of <span className="relative group cursor-default">
 							<span className="relative z-10 font-bold decoration-sky-500/50 underline underline-offset-4">creativity.</span>
 							<span className="absolute -inset-1 bg-sky-50 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 -z-10" />
 						</span> We empower hobbyists to turn their dreams into reality through community and innovation.
 					</p>
-					<div className="flex flex-col sm:flex-row gap-4 pt-4">
+					<div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-up opacity-0" style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}>
 						<Link href="/projects" className="px-8 py-4 bg-neutral-900 text-white font-bold rounded-2xl hover:bg-neutral-800 transition-all hover:shadow-xl active:scale-95 text-center">
 							Explore Projects
 						</Link>
@@ -31,7 +31,7 @@ export default function Page() {
 						</Link>
 					</div>
 				</div>
-				<div className="flex-1 w-full max-w-lg lg:max-w-xl relative">
+				<div className="flex-1 w-full max-w-lg lg:max-w-xl relative animate-fade-up opacity-0" style={{ animationDelay: "0.45s", animationFillMode: "forwards" }}>
 					<div className="relative aspect-4/5 md:aspect-[3/4] rounded-2xl overflow-hidden z-10 transform lg:-rotate-2 transition-transform duration-500 hover:rotate-0">
 						<Image
 							className="object-cover transition-transform duration-700 hover:scale-105"
@@ -54,7 +54,7 @@ export default function Page() {
 
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 					{/* Card 1: Indie Game */}
-					<a href="#" className="group relative bg-neutral-900 rounded-xl overflow-hidden shadow-lg border border-neutral-800 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:-translate-y-2">
+					<Link href="#" className="group relative bg-neutral-900 rounded-xl overflow-hidden shadow-lg border border-neutral-800 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:-translate-y-2">
 						<div className="aspect-[16/10] overflow-hidden relative">
 							<div className="absolute inset-0 bg-neutral-800 group-hover:bg-neutral-700 transition-colors"></div>
 							{/* Placeholder geometric art for indie game */}
@@ -76,10 +76,10 @@ export default function Page() {
 								</svg>
 							</div>
 						</div>
-					</a>
+					</Link>
 
 					{/* Card 2: VTuber Agency */}
-					<a href="#" className="group relative bg-neutral-900 rounded-xl overflow-hidden shadow-lg border border-neutral-800 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:-translate-y-2">
+					<Link href="#" className="group relative bg-neutral-900 rounded-xl overflow-hidden shadow-lg border border-neutral-800 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:-translate-y-2">
 						<div className="aspect-[16/10] overflow-hidden relative">
 							<Image
 								src={Mascot}
@@ -100,10 +100,10 @@ export default function Page() {
 								</svg>
 							</div>
 						</div>
-					</a>
+					</Link>
 
 					{/* Card 3: Fan-Made Merch */}
-					<a href="/merch" className="group relative bg-neutral-900 rounded-xl overflow-hidden shadow-lg border border-neutral-800 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:-translate-y-2">
+					<Link href="/merch" className="group relative bg-neutral-900 rounded-xl overflow-hidden shadow-lg border border-neutral-800 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:-translate-y-2">
 						<div className="aspect-[16/10] overflow-hidden relative">
 							<div className="absolute inset-0 bg-neutral-800 group-hover:bg-neutral-700 transition-colors"></div>
 							<div className="absolute inset-0 opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 flex items-center justify-center">
@@ -124,7 +124,7 @@ export default function Page() {
 								</svg>
 							</div>
 						</div>
-					</a>
+					</Link>
 				</div>
 			</section>
 
@@ -135,16 +135,19 @@ export default function Page() {
 						<h2 className="font-hanson text-3xl md:text-4xl lg:text-5xl text-neutral-900 uppercase">About<br className="hidden md:block" />The Guild</h2>
 						<div className="w-16 h-1 bg-cyan-400 mx-auto md:mx-0"></div>
 						<p className="text-lg md:text-xl text-neutral-600 font-medium leading-relaxed">
-							We are a collective of pop-culture enthusiasts, building worlds through games and virtual talents. OtaByte is more than a studio—it\'s a movement dedicated to turning radical hobbies into bleeding-edge creativity.
+							We are a collective of pop-culture enthusiasts, building worlds through games and virtual talents. OtaByte is more than a studio—it's a movement dedicated to turning radical hobbies into bleeding-edge creativity.
 						</p>
 					</div>
-					<div className="flex-1 w-full max-w-md">
+					<div className="flex-1 w-full max-w-md group">
 						<div className="relative aspect-square rounded-full border border-neutral-200 overflow-hidden shadow-[0_10px_40px_rgba(6,182,212,0.15)] flex items-center justify-center bg-neutral-50 p-8">
 							<div className="absolute inset-0 border-[16px] border-white z-20 rounded-full"></div>
 							{/* Stylized placeholder illustration */}
-							<svg xmlns="http://www.w3.org/2000/svg" className="w-32 h-32 text-neutral-300" viewBox="0 0 24 24" fill="currentColor">
-								<path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-							</svg>
+							<Image
+								src="/images/artwork/josyifa/megumin_doodle.jpg"
+								alt="Artwork of Megumin"
+								className="object-cover opacity-80 group-hover:opacity-100 group-hover:rotate-5 group-hover:scale-110 transition-all duration-500"
+								fill
+							/>
 						</div>
 					</div>
 				</div>
@@ -166,26 +169,26 @@ export default function Page() {
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 					{/* News Card 1 */}
-					<a href="#" className="group bg-white p-6 rounded-xl border border-neutral-200 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] hover:-translate-y-1">
+					<Link href="#" className="group bg-white p-6 rounded-xl border border-neutral-200 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] hover:-translate-y-1">
 						<div className="text-xs font-bold text-cyan-500 uppercase tracking-widest mb-3">Update</div>
 						<h3 className="text-lg font-bold text-neutral-900 mb-2 group-hover:text-cyan-600 transition-colors">Project Nexus: Patch v1.0.4 Deployed</h3>
 						<p className="text-neutral-500 text-sm line-clamp-3">Major performance updates, new UI features for the command center, and a complete re-balancing of the early-game quests.</p>
 						<div className="text-neutral-400 text-xs font-medium mt-6">October 24, 2025</div>
-					</a>
+					</Link>
 					{/* News Card 2 */}
-					<a href="#" className="group bg-white p-6 rounded-xl border border-neutral-200 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] hover:-translate-y-1">
+					<Link href="#" className="group bg-white p-6 rounded-xl border border-neutral-200 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] hover:-translate-y-1">
 						<div className="text-xs font-bold text-cyan-500 uppercase tracking-widest mb-3">Announcement</div>
 						<h3 className="text-lg font-bold text-neutral-900 mb-2 group-hover:text-cyan-600 transition-colors">New VTuber Idol Debut Stream</h3>
 						<p className="text-neutral-500 text-sm line-clamp-3">Get your lightsticks ready! Our newest virtual talent makes their highly anticipated debut this weekend on the OtaByte main channel.</p>
 						<div className="text-neutral-400 text-xs font-medium mt-6">October 20, 2025</div>
-					</a>
+					</Link>
 					{/* News Card 3 */}
-					<a href="#" className="group bg-white p-6 rounded-xl border border-neutral-200 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] hover:-translate-y-1">
+					<Link href="#" className="group bg-white p-6 rounded-xl border border-neutral-200 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] hover:-translate-y-1">
 						<div className="text-xs font-bold text-cyan-500 uppercase tracking-widest mb-3">Merch Drop</div>
 						<h3 className="text-lg font-bold text-neutral-900 mb-2 group-hover:text-cyan-600 transition-colors">Limited Edition Guild Jackets Available</h3>
 						<p className="text-neutral-500 text-sm line-clamp-3">Stock is extremely limited! Grab our new premium streetwear jackets featuring custom embroidery and sci-fi aesthetic prints.</p>
 						<div className="text-neutral-400 text-xs font-medium mt-6">October 15, 2025</div>
-					</a>
+					</Link>
 				</div>
 			</section>
 
