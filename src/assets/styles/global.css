@@ -2,13 +2,30 @@
 @plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/typography";
 
+@font-face {
+	font-family: 'Hanson';
+	src: url('../fonts/Hanson-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
 @layer base {
 	* {
 		@apply text-neutral-800;
 	}
+	body {
+		@apply bg-white;
+	}
 }
 
 @theme {
+	--font-hanson: 'Hanson', sans-serif;
+	
+	--color-bg-white: #ffffff;
+	--color-text-dark: #1f2937;
+	--color-accent-cyan: #06b6d4;
+	
 	--animate-fade-up: fade-up 0.5s ease-out;
 
 	@keyframes fade-up {
