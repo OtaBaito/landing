@@ -1,7 +1,7 @@
 import '@/assets/styles/global.css'
 import { FooterComponent, HeaderComponent } from '@/components/layout'
 
-const baseEndpoint = process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : ''
+const baseEndpoint = process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : 'https://otabyte.net'
 
 export const metadata = {
 	title: 'OtaByte',
