@@ -1,36 +1,48 @@
+'use client'
+
+import { useState } from 'react'
 import { faDiscord, faFacebook, faInstagram, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 
-export const socials = [
-	{
-		name: 'Instagram',
-		icon: faInstagram,
-		link: 'https://instagram.com/otabaito',
-	},
-	{
-		name: 'Facebook',
-		icon: faFacebook,
-		link: 'https://www.facebook.com/otabaito',
-	},
-	{
-		name: 'Discord',
-		icon: faDiscord,
-		link: 'https://discord.gg/P77B5VD3q7',
-	},
-	{
-		name: 'LinkedIn',
-		icon: faLinkedin,
-		link: 'https://www.linkedin.com/company/otapro',
-	},
-	{
-		name: 'X (Twitter)',
-		icon: faXTwitter,
-		link: 'https://x.com/otabaito',
-	},
-]
+import { socials } from './socials'
 
 export default function ContactPage() {
+	const [isLoading, setIsLoading] = useState(false)
+	const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault()
+		setIsLoading(true)
+		setStatus('idle')
+
+		const formData = new FormData(e.currentTarget)
+		const data = {
+			name: formData.get('name'),
+			email: formData.get('email'),
+			message: formData.get('message'),
+		}
+
+		try {
+			const res = await fetch('/api/contact', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(data),
+			})
+
+			if (res.ok) {
+				setStatus('success')
+					; (e.target as HTMLFormElement).reset()
+			} else {
+				setStatus('error')
+			}
+		} catch (error) {
+			setStatus('error')
+		} finally {
+			setIsLoading(false)
+		}
+	}
+
 	return (
 		<main className="w-full bg-white flex flex-col min-h-[80vh]">
 			<section className="flex-1 max-w-7xl mx-auto w-full px-6 py-12 md:py-24">
@@ -47,7 +59,7 @@ export default function ContactPage() {
 							{/* Decorative top border */}
 							<div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-cyan-400 to-cyan-500"></div>
 
-							<form className="space-y-6">
+							<form className="space-y-6" onSubmit={handleSubmit}>
 								<div>
 									<label htmlFor="name" className="block text-xs font-bold text-neutral-900 uppercase tracking-widest mb-2">Identifier (Name)</label>
 									<input
@@ -86,13 +98,19 @@ export default function ContactPage() {
 
 								<button
 									type="submit"
-									className="w-full py-4 mt-2 bg-cyan-500 text-neutral-900 font-bold uppercase tracking-widest rounded-lg hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.6)] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+									disabled={isLoading || status === 'success'}
+									className="w-full py-4 mt-2 bg-cyan-500 text-neutral-900 font-bold uppercase tracking-widest rounded-lg hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.6)] active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-75 disabled:cursor-not-allowed"
 								>
-									Transmit
-									<svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-										<path strokeLinecap="round" strokeLinejoin="round" d="M13 5l7 7m0 0l-7 7m7-7H3" />
-									</svg>
+									{isLoading ? 'Transmitting...' : status === 'success' ? 'Message Sent' : 'Transmit'}
+									{!isLoading && status !== 'success' && (
+										<svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+											<path strokeLinecap="round" strokeLinejoin="round" d="M13 5l7 7m0 0l-7 7m7-7H3" />
+										</svg>
+									)}
 								</button>
+								{status === 'error' && (
+									<p className="text-red-500 text-sm font-bold text-center mt-2">Error transmitting message. Please try again.</p>
+								)}
 							</form>
 						</div>
 					</div>

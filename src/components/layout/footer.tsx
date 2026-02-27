@@ -1,5 +1,4 @@
-import { socials } from '@/app/contact/page'
-import { faDiscord, faFacebook, faInstagram, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import { socials } from '@/app/contact/socials'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 

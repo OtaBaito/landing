@@ -6,7 +6,7 @@ export default function Hero() {
 	return (
 		<section>
 			<div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-12 lg:gap-24">
-				<div className="flex-1 space-y-8 md:space-y-12">
+				<div className="w-full md:flex-1 space-y-6 sm:space-y-8 md:space-y-12">
 					<h1 className="text-5xl md:text-6xl lg:text-8xl font-black tracking-tight leading-[1.1] text-neutral-900 animate-fade-up opacity-0" style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}>
 						Made<br />
 						<span className="text-sky-500">Hobby</span>
@@ -21,16 +21,16 @@ export default function Hero() {
 							<span className="absolute -inset-1 bg-sky-50 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 -z-10" />
 						</span> We empower hobbyists to turn their dreams into reality through community and innovation.
 					</p>
-					<div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-up opacity-0" style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}>
+					<div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4 animate-fade-up opacity-0" style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}>
 						<Link href="/projects" className="px-8 py-4 bg-neutral-900 text-white font-bold rounded-2xl hover:bg-neutral-800 transition-all hover:shadow-xl active:scale-95 text-center">
 							Explore Projects
 						</Link>
-						<Link href="/about" className="px-8 py-4 bg-white border-2 border-neutral-100 text-neutral-900 font-bold rounded-2xl hover:border-neutral-200 transition-all active:scale-95">
+						<Link href="/about" className="px-8 py-4 bg-white border-2 border-neutral-100 text-neutral-900 font-bold rounded-2xl hover:border-neutral-200 transition-all active:scale-95 text-center">
 							About Us
 						</Link>
 					</div>
 				</div>
-				<div className="flex-1 w-full max-w-lg lg:max-w-xl relative animate-fade-up opacity-0" style={{ animationDelay: "0.45s", animationFillMode: "forwards" }}>
+				<div className="w-full md:flex-1 max-w-lg lg:max-w-xl relative animate-fade-up opacity-0" style={{ animationDelay: "0.45s", animationFillMode: "forwards" }}>
 					<div className="relative aspect-4/5 md:aspect-[3/4] rounded-2xl overflow-hidden z-10 transform lg:-rotate-2 transition-transform duration-500 hover:rotate-0">
 						<Image
 							className="object-cover transition-transform duration-700 hover:scale-105"
